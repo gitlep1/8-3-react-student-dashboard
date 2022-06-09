@@ -35,8 +35,6 @@ class StudentFound extends Component {
       convertDOB,
     } = this.props;
 
-    console.log(studentFound);
-
     return (
       <>
         {studentFound ? (

@@ -41,6 +41,7 @@ class StudentList extends Component {
 
     const students = studentData.map((students) => {
       let middleInitial = students.names.middleName.charAt(0).toUpperCase();
+      students.comments = [];
 
       if (cohortCode === "All Students") {
         totalStudents++;
@@ -68,7 +69,7 @@ class StudentList extends Component {
                 {this.convertDOB(students.dob)}
               </p>
             </section>
-            <ShowMore students={students} />
+            <ShowMore students={students} cohortCode={cohortCode} />
           </article>
         );
       } else if (students.cohort.cohortCode === cohortCode) {
